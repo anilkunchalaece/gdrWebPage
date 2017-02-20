@@ -14,6 +14,20 @@ $(document).ready(function() {
   var ksrmMarker = L.marker([14.476832,78.765157]).addTo(mapWithPopUp);
   ksrmMarker.bindPopup('KSRM College of Engineering').openPopup();
 
-  
+  //For Map with multiple locaions
+  var places = {
+    "name" : ["KSRM College Of Engineering","KORM College Of Engineering","KLM College Of Engineering"],
+    "latLon" : [[14.476832,78.765157],[14.478855,78.763658],[14.479601,78.764584]]
+  }
+//console.log(locations.name.length)
+
+var mapWithMultipleLocations = L.map('mapWithMultipleLocations').setView([14.476832,78.765157],15);
+L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png').addTo(mapWithMultipleLocations);
+
+for (x in places.name){
+  //console.log(places.name[x]);
+  //console.log(places.latLon[x])
+  L.marker(places.latLon[x]).addTo(mapWithMultipleLocations).bindPopup(places.name[x]);
+}
 
 });
