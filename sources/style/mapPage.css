@@ -1,3 +1,6 @@
 #mapid {
-  height: 180px;
+  width : 500px;
+  height : 500px;
+  color : red;
+  border : solid red 10px;
 }
