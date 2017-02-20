@@ -1,6 +1,9 @@
-#mapid {
+#mapEmpty {
   width : 500px;
   height : 500px;
   color : red;
   border : solid red 10px;
+}
+h1{
+  text-align: center;
 }
