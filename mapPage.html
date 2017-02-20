@@ -7,27 +7,35 @@
 
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
     <link rel="stylesheet" href="sources/style/mapPage.css" />
-
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
 
 </head>
 
 <body>
     <div class="container page">
-      <div class="jumbotron">
-        <h1> Leaflet js Examples </h1>
-        <p> simple examples for adding map,selector and mapping area
-      </div>
+        <div class="jumbotron">
+            <h1> Leaflet js Examples </h1>
+            <p> simple examples for adding map,selector and mapping area
+        </div>
 
-      <div class="row">
-        <div class="col-md-6">
-          <section>
-            <h1> Adding empty map </h1>
-    <div id="mapEmpty"> </div>
-  </section>
-  </div>
-  </div>
-</div>
+        <div class="row">
+            <div class="col-md-6">
+                <section>
+                    <h1> Adding empty map </h1>
+                    <p> Add a Map Object in script page </p>
+                    <div id="mapEmpty" class="mapSection"> </div>
+                </section>
+            </div>
+            <div class="col-md-6">
+              <section>
+              <h1> Adding OSM Tiles </h1>
+              <p> Add OSM tilelayer to map Object</p>
+              <div id="mapOSM" class="mapSection"></div>
+
+              </section>
+            </div>
+        </div>
+    </div>
 
 
 
