@@ -4,6 +4,6 @@
   color : red;
   border : solid red 10px;
 }
-h1{
+h1,p{
   text-align: center;
 }
