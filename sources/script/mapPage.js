@@ -42,11 +42,34 @@ $(document).ready(function() {
   //For Map with Search Functionality
   var mapWithSearch = L.map('mapWithSearch').setView([14.476832, 78.765157], 15);
   L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png').addTo(mapWithSearch);
-  var osmGeocoder = new L.Control.OSMGeocoder(
+  var search = new L.Control.OSMGeocoder(
     {
       collapsed : false,
       position : 'bottomright',
       text : 'Search'
     });
-  mapWithSearch.addControl(osmGeocoder);
+  mapWithSearch.addControl(search);
+    //----------------------------------------------------------------------------------------------
+    //----------------------------------------------------------------------------------------------
+  //For mapWithLocationAdding using Search Button
+  var mapWithLocationAdding = L.map('mapWithLocationAdding').setView([14.476832,78.765157], 15);
+  L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png').addTo(mapWithLocationAdding);
+  var searchWithLocationAdding = new L.Control.OSMGeocoder(
+    {
+      collapsed : false,
+      position : 'bottomright',
+      text : 'Search',
+      callback: function(results) {
+        var name = results[0].display_name,
+            latLon = [results[0].lat,results[0].lon];
+        console.log();
+        console.log(latLon);
+        console.log(results[0]);
+
+        mapWithLocationAdding.setView(latLon,10);
+        L.marker(latLon).addTo(mapWithLocationAdding).bindPopup(name);
+      }
+    });
+
+  mapWithLocationAdding.addControl(searchWithLocationAdding);
   });
