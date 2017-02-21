@@ -1,0 +1,14 @@
+For Reference
+https://leanpub.com/leaflet-tips-and-tricks
+
+To find Lat and lon of Locations
+http://www.findlatitudeandlongitude.com/
+
+For Routing Check the :
+http://www.liedman.net/leaflet-routing-machine/
+
+
+For Places searching - GeoCoding
+https://github.com/k4r573n/leaflet-control-osm-geocoder
+
+

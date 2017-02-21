@@ -6,6 +6,8 @@
     <title> Map Testing Page </title>
 
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
+    <!-- for Search Console -->
+    <link rel="stylesheet" href="sources/style/Control.OSMGeocoder.css" />
     <link rel="stylesheet" href="sources/style/mapPage.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
 
@@ -52,18 +54,29 @@
                 <p> Adding multiple locations to the Map </p>
                 <div id="mapWithMultipleLocations" class="mapSection"></div>
               </section>
-
-              </div>
             </div>
+            <div class="col-md-4">
+            <section>
+              <h1> Map with Search Bar </h1>
+              <p>adding a UIelement with using IControl and adding search function </p>
+              <div id="mapWithSearch" class="mapSection"></div>
+            </section>
+          </div>
+              <div class="col-md-4">
+              </div>
+
         </div>
       </div>
     </div>
 
 
 
-
-    <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+
+    <!-- For Searching Places-->
+    <script src="sources/script/Control.OSMGeocoder.js"></script>
+
     <script src="sources/script/mapPage.js"></script>
 </body>
 </html>
