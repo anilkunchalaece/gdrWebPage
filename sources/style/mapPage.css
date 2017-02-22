@@ -13,3 +13,8 @@ h1{
 .jumbotron h1{
   font-size: 30px !important;
 }
+
+.mapRouting{
+  width : 500px;
+  height : 500px;
+}

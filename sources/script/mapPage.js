@@ -72,4 +72,14 @@ $(document).ready(function() {
     });
 
   mapWithLocationAdding.addControl(searchWithLocationAdding);
-  });
+  //------------------------------------------------------------------------------------------
+  //-------------------------------------------------------------------------------------------
+  var mapWithRouting = L.map('mapWithRouting').setView([14.476832,78.765157]);
+  L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png').addTo(mapWithRouting);
+
+  L.Routing.control({
+    routeWhileDragging: true,
+    geocoder : new L.Control.OSMGeocoder()
+  }).addTo(mapWithRouting);
+
+});
